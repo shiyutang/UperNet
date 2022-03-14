@@ -169,6 +169,7 @@ class UPerNetHead(nn.Layer):
         fpn_feature_list.reverse()
         output_size = fpn_feature_list[0].shape[2:]
         # resize multi-scales feature
+        import pdb; pdb.set_trace()
         for index in range(len(conv_out)-1, 0, -1):
             fpn_feature_list[index] = F.interpolate(
                 fpn_feature_list[index],

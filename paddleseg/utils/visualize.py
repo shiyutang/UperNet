@@ -43,6 +43,8 @@ def visualize(image, result, save_dir=None, weight=0.6):
     pseudo_img = np.dstack((c1, c2, c3))
 
     im = cv2.imread(image)
+    import pdb; pdb.set_trace()
+
     vis_result = cv2.addWeighted(im, weight, pseudo_img, 1 - weight, 0)
 
     if save_dir is not None:

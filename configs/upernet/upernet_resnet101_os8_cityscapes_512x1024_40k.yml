@@ -27,6 +27,14 @@ train_dataset:
       saturation_range: 0.4
     - type: Normalize
 
+val_dataset:
+  type: Cityscapes
+  dataset_root: data/cityscapes
+  transforms:
+    - type: Normalize
+  mode: val
+
+
 loss:
   types:
     - type: CrossEntropyLoss
